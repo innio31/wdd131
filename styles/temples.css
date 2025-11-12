@@ -1,0 +1,146 @@
+/* temples.css - Mobile First Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+#course-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Hamburger Button Styles */
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: block;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--light-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

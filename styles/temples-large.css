@@ -1,0 +1,74 @@
+/* temples-large.css - Larger View Styles */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    #course-title {
+        margin-bottom: 0;
+    }
+
+    /* Hide hamburger button on larger screens */
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+        display: flex !important;
+        /* Ensure nav is always visible */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    img {
+        height: 220px;
+    }
+}
+
+/* Mobile navigation styles */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav ul.nav-open {
+        max-height: 500px;
+        /* Adjust based on your content */
+        margin-top: 1rem;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
