@@ -1,0 +1,188 @@
+/* Global CSS Variables for consistent theming */
+:root {
+    /* Color Palette - Customize these based on your place's colors */
+    --color-primary: #1E3A8A;
+    /* A deep blue (for headers, accents) */
+    --color-secondary: #DC2626;
+    /* A strong red (for buttons, highlights) */
+    --color-accent: #F59E0B;
+    /* A golden yellow (for borders, details) */
+    --color-background: #FEFCE8;
+    /* A light cream/off-white (for page background) */
+    --color-text: #1F2937;
+    /* A near-black for text */
+    --color-text-light: #6B7280;
+    /* A gray for secondary text */
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+/* --- Header & Hero Image --- */
+header {
+    position: relative;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    height: 40vh;
+    /* Controls the hero image height */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Main Content Sections --- */
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the Facts List */
+#facts ul {
+    list-style-position: inside;
+}
+
+#facts li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Gallery --- */
+#gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#gallery img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* --- Weather Section --- */
+#weather {
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+}
+
+/* This adds the emoticon AFTER the "Weather" heading, but only on large screens. We hide it by default (mobile) */
+#weather h2::after {
+    display: none;
+    /* Hidden on mobile */
+    /* Content will be defined in the media query */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* --- Media Query for Wider Screens (Tablet/Desktop) --- */
+@media (min-width: 768px) {
+
+    /* Adjust main layout if needed, e.g., switch to a grid */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* Make the intro and gallery span two columns */
+    #intro {
+        grid-column: 1 / -1;
+    }
+
+    #gallery {
+        grid-column: 1 / -1;
+    }
+
+    /* Change gallery to a row of images */
+    #gallery {
+        flex-direction: row;
+    }
+
+    #gallery img {
+        width: calc(33.333% - 1rem);
+        /* 3 images per row accounting for gap */
+    }
+
+    /* --- PSEUDO-ELEMENT FOR WEATHER ICON --- */
+    /* This fulfills the specific requirement */
+    #weather h2::after {
+        display: inline-block;
+        /* Make it visible */
+        content: " ⛅";
+        /* This is the emoticon! Change to match your SVG */
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    /* We can also hide the SVG in the wider view if we want, but the instructions aren't explicit. Let's hide it for clarity. */
+    #weather-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Place Name - A Travel Guide</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+            <img src="images/hero-small.webp" alt="A beautiful view of your chosen place">
+        </picture>
+        <h1>Name of Your Place</h1>
+    </header>
+
+    <nav>
+        <!-- This will be the navigation bar -->
+    </nav>
+
+    <main>
+        <!-- This is the main content area -->
+        <section id="intro">
+            <!-- Introduction text -->
+        </section>
+
+        <section id="facts">
+            <!-- Key facts or data -->
+        </section>
+
+        <section id="gallery">
+            <!-- Image gallery -->
+        </section>
+
+        <section id="weather">
+            <h2>Weather</h2>
+            <!-- SVG Icon for Mobile -->
+            <img id="weather-icon" src="images/weather-icon.svg" alt="Weather Icon" width="50" height="50">
+            <p>Current Temperature: <span id="temperature">45</span>°F</p> <!-- Match the static value here -->
+            <p>Wind Speed: <span id="wind-speed">10</span> mph</p> <!-- Match the static value here -->
+            <p>Wind Chill: <span id="wind-chill-value">N/A</span></p> <!-- JavaScript will update this -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Copyright and footer info -->
+    </footer>
+</body>
+
+</html>
