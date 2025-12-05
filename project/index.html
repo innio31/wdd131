@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Impact Digital Academy - Professional digital skills training for career advancement">
+    <meta name="author" content="Your Name">
+    <title>Home - Impact Digital Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>Impact Digital Academy</h1>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Transform Your Career with Digital Mastery</h2>
+                    <p>Learn in-demand skills from industry experts. Launch or advance your career in tech with
+                        hands-on, project-based learning.</p>
+                    <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+                </div>
+                <img src="images/hero-image.jpg" alt="Students collaborating on digital project" loading="lazy">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Impact Digital Academy?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Industry-Relevant Curriculum</h3>
+                        <p>Our courses are constantly updated to match current industry demands and trends.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🏫</div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from professionals with real-world experience in leading tech companies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Career Support</h3>
+                        <p>Get personalized career coaching, resume reviews, and interview preparation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h3>Hands-On Projects</h3>
+                        <p>Build a professional portfolio with real projects that demonstrate your skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Student Success Stories</h2>
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <!-- Testimonials will be loaded via JavaScript -->
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous testimonial">‹</button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next" aria-label="Next testimonial">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 data-count="95">0</h3>
+                        <p>Employment Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="1200">0</h3>
+                        <p>Graduates</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="4.8">0</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="50">0</h3>
+                        <p>Industry Partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Join thousands of successful graduates who transformed their careers with us.</p>
+                <a href="contact.html" class="btn btn-primary">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Impact Digital Academy</h3>
+                    <p>Empowering careers through digital education since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="siteplan.html">Site Plan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Tech Street, Digital City</p>
+                    <p>📧 info@impactdigitalacademy.com</p>
+                    <p>📞 (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Impact Digital Academy. All rights reserved.</p>
+                <p>Last visited: <span id="lastVisit"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

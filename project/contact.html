@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Impact Digital Academy for course inquiries, enrollment, and support">
+    <meta name="author" content="Your Name">
+    <title>Contact Us - Impact Digital Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>Impact Digital Academy</h1>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team to learn more about our programs and start your journey</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <div class="contact-method">
+                            <h3>📍 Location</h3>
+                            <p>123 Tech Street<br>Digital City, DC 12345</p>
+                        </div>
+                        <div class="contact-method">
+                            <h3>📞 Phone</h3>
+                            <p>Main: (123) 456-7890<br>Admissions: (123) 456-7891</p>
+                        </div>
+                        <div class="contact-method">
+                            <h3>📧 Email</h3>
+                            <p>General: info@impactdigitalacademy.com<br>Admissions: admissions@impactdigitalacademy.com
+                            </p>
+                        </div>
+                        <div class="contact-method">
+                            <h3>⏰ Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required minlength="2" maxlength="100">
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="123-456-7890">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="courseInterest">Course Interest</label>
+                                <select id="courseInterest" name="courseInterest">
+                                    <option value="">Select a course</option>
+                                    <option value="web-dev">Full-Stack Web Development</option>
+                                    <option value="data-science">Data Science & Analytics</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="ui-ux">UI/UX Design</option>
+                                    <option value="cybersecurity">Cybersecurity</option>
+                                    <option value="not-sure">Not sure yet</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageType">What can we help you with? *</label>
+                                <select id="messageType" name="messageType" required>
+                                    <option value="">Select an option</option>
+                                    <option value="admissions">Admissions & Enrollment</option>
+                                    <option value="curriculum">Course Curriculum</option>
+                                    <option value="financial-aid">Financial Aid & Payment</option>
+                                    <option value="career-support">Career Support</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                                <div class="error-message" id="typeError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required minlength="10"
+                                    maxlength="1000"></textarea>
+                                <div class="error-message" id="messageError"></div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                            </div>
+
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container" id="faqContainer">
+                    <!-- FAQ items will be loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Impact Digital Academy</h3>
+                    <p>Empowering careers through digital education since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="siteplan.html">Site Plan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Tech Street, Digital City</p>
+                    <p>📧 info@impactdigitalacademy.com</p>
+                    <p>📞 (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Impact Digital Academy. All rights reserved.</p>
+                <p>Last visited: <span id="lastVisit"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
